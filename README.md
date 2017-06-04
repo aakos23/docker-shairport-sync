@@ -1,9 +1,12 @@
 [shairport-sync](https://github.com/mikebrady/shairport-sync) is an Apple AirPlay receiver. It can receive audio directly from iOS devices, iTunes, etc. Multiple instances of shairport-sync will stay in sync with each other and other AirPlay devices when used with a compatible multi-room player, such as iTunes or [forked-daapd](https://github.com/jasonmc/forked-daapd).
+Shairport-snyc version: 3.0.2-OpenSSL-Avahi-ALSA-pipe-soxr-metadata (latest git version) 
+
+Forked from [kevineye/docker-shairport-sync](https://github.com/kevineye/docker-shairport-sync).
 
 ## Build
 
 ```
-docker build -t kevineye/shairport-sync .
+docker build -t akosasztalos/shairport .
 ```
 
 ## Run
@@ -14,7 +17,7 @@ docker run -d \
     --net host \
     --device /dev/snd \
     -e AIRPLAY_NAME=Docker \
-    kevineye/shairport-sync
+    akosasztalos/shairport
 ```
 
 ### Parameters
